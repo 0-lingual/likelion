@@ -1,1 +1,2 @@
-print("Hello, likeLion!")
+Hello, likeLion!
+Hello, Hongik Lions!
