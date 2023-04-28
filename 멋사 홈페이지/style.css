@@ -1,0 +1,112 @@
+/* Header */
+header {
+    background-color:black;
+    height: 70px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 100%;
+  }
+  
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: white;
+    margin-left : 300px
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 300px;
+  }
+  
+  nav li {
+    margin-right: 20;
+  }
+  
+  nav a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  a.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }  
+  
+  nav a:hover {
+    color: white;
+  }
+  
+  body {
+    background-image: url("background.png");
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* About section */
+  .about-section {
+    background-image: "icon.ico";
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-bg {
+    max-width: 600px;
+    padding: 50px;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 47px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+
+  p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 22px;
+    color: white;
+    line-height: 1.5;
+  }
+  
+  img {
+    width: 20px; /* 가로 크기를 200px로 고정 */
+    height: auto; /* 세로 크기는 자동으로 비율에 맞게 조절 */
+  }
+
+  .highlight {
+    color: orange;
+  }
+  
+  
