@@ -39,7 +39,7 @@ def post_create_view(request):
         Post.objects.create(
             image=image,
             content=content,
-            writer=request.user
+            writer=request.user 
         )
         return redirect(index)
 

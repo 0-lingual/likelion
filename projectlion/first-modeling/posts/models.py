@@ -1,24 +1,24 @@
 from django.db import models
-import MySQLdb
+# import MySQLdb
 
-# MySQL에 연결
-conn = MySQLdb.connect(host='localhost', user='your_username', password='your_password', database='your_database')
+# # MySQL에 연결
+# conn = MySQLdb.connect(host='localhost', user='your_username', password='your_password', database='your_database')
 
-# 커서 생성
-cursor = conn.cursor()
+# # 커서 생성
+# cursor = conn.cursor()
 
-# SQL 쿼리 실행
-cursor.execute('SELECT * FROM your_table')
+# # SQL 쿼리 실행
+# cursor.execute('SELECT * FROM your_table')
 
-# 결과 가져오기
-results = cursor.fetchall()
+# # 결과 가져오기
+# results = cursor.fetchall()
 
-# 결과 출력
-for row in results:
-    print(row)
+# # 결과 출력
+# for row in results:
+#     print(row)
 
-# 연결 종료
-conn.close()
+# # 연결 종료
+# conn.close()
 
 # Create your models here.
 
