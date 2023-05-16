@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from user.jwt_claim_serializer import SpartaTokenObtainPairSerializer
+from .jwt_serializer import SpartaTokenObtainPairSerializer
+from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 # Create your views here.
@@ -9,7 +10,7 @@ class SpartaTokenObtainPairView(TokenObtainPairView):
 # 회원가입 구현
 class RegisterAPIView(APIView):
     def post(self, request):
-        serializer = UserSerializer(data=request.data)
+        serializer = RegisterSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
             
@@ -17,7 +18,7 @@ class RegisterAPIView(APIView):
             token = TokenObtainPairSerializer.get_token(user)
             refresh_token = str(token)
             access_token = str(token.access_token)
-            return Response(
+            res = Response(
                 {
                     "user": serializer.data,
                     "message": "register successs",
@@ -29,4 +30,5 @@ class RegisterAPIView(APIView):
                 status=status.HTTP_200_OK,
             )
         
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return res
+    
